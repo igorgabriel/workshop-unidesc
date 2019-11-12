@@ -14,10 +14,10 @@ import (
 // DBConn Mysql Database Connection ...
 func DBConn() (db *sql.DB, err error) {
 	dbDriver := "mysql"
-	dbUser := os.Getenv("PIVOTAL_DB_USER")
-	dbHost := os.Getenv("PIVOTAL_DB_HOST")
-	dbPass := os.Getenv("PIVOTAL_DB_PASSWORD")
-	dbName := os.Getenv("PIVOTAL_DB_NAME")
+	dbUser := os.Getenv("DB_USER")
+	dbHost := os.Getenv("DB_HOST")
+	dbPass := os.Getenv("DB_PASSWORD")
+	dbName := os.Getenv("DB_NAME")
 
 	db, err = sql.Open(dbDriver, fmt.Sprintf("%s:%s@tcp(%s:3306)/%s", dbUser, dbPass, dbHost, dbName))
 	if err != nil {
