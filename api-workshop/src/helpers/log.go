@@ -9,7 +9,7 @@ import (
 // InitializeLogs ...
 func InitializeLogs() {
 
-	logLevel := os.Getenv("PIVOTAL_LOG_LEVEL")
+	logLevel := os.Getenv("LOG_LEVEL")
 
 	switch logLevel {
 	case "debug":

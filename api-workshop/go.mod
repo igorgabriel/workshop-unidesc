@@ -1,4 +1,4 @@
-module gitlab.sandmanbb.com/pivotal/agrows-client
+module github.com/igorgabriel/api-workshop
 
 go 1.12
 

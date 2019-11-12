@@ -4,12 +4,14 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/igorgabriel/api-workshop/src/helpers"
+	"github.com/igorgabriel/api-workshop/src/routes"
 	cors "github.com/itsjamie/gin-cors"
 	"github.com/sirupsen/logrus"
 )
 
 func main() {
-	logrus.Infof("==== Starting AgroWS Client API ====")
+	logrus.Infof("==== Starting Workshop API ====")
 
 	helpers.InitializeLogs()
 
