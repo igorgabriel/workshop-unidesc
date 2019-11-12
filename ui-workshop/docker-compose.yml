@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  react:
+    container_name: ui-workshop
+    image: "workshop/frontend"
+    build: .
+    environment:
+      - DEV_URL_API_BACKEND=http://localhost:8888/v1
+    volumes:
+      - ./src:/usr/src/app/src
+      - ./public:/usr/src/app/public
+    ports:
+      - "3000:3000"
+    command: ["yarn", "start"]
